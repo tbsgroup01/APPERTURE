@@ -1,0 +1,50 @@
+
+/* Shutter.css */
+:root {
+  --bg-color: #050505;
+  --accent-blue: #46B0D5;
+  --blade-gradient: linear-gradient(135deg, #1a1a1c 0%, #0a0a0b 50%, #000 100%);
+}
+
+.shutter-container {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, #0f0f12 0%, #000 80%);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 8px #111,
+    0 20px 50px rgba(0,0,0,0.9),
+    0 0 40px rgba(70, 176, 213, 0.15);
+}
+
+.shutter-blade {
+  position: absolute;
+  inset: -2px;
+  background: var(--blade-gradient);
+  /* The "Aperture" geometry */
+  clip-path: polygon(50% 50%, 100% 0%, 100% 65%, 65% 100%);
+  transform-origin: 50% 50%;
+  border: 0.5px solid rgba(70, 176, 213, 0.1);
+  z-index: 10;
+}
+
+/* Initial Blade Rotations */
+.b1 { --r: 0deg; }
+.b2 { --r: 60deg; }
+.b3 { --r: 120deg; }
+.b4 { --r: 180deg; }
+.b5 { --r: 240deg; }
+.b6 { --r: 300deg; }
+
+.content-box-glow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, var(--accent-blue), transparent);
+}
+
+
