@@ -1,2 +1,119 @@
 @import "tailwindcss";
 
+body {
+  overflow-x: hidden;
+} 
+
+.glass-btn {
+
+  display: inline-flex;
+  text-decoration: none; /* Removes the default blue underline */
+  color: white;
+  position: relative;
+  padding: 12px 32px;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The Glass Body */
+.glass-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* This creates the gradient border thickness */
+  
+  /* Semi-transparent background with blur */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* The "Magic" Border: Subtle white to transparent gradient */
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  
+  background-image: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.5), 
+    rgba(255, 255, 255, 0.05)
+  );
+  
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+/* The Shine/Glow Hover Effect */
+.glass-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.glass-btn:hover::before {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* The Animated light streak */
+.glass-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+
+.glass-btn:hover::after {
+  left: 125%;
+}
+
+
+/* Custom Stroke for the Letters */
+/* Stroke effect for the initial letters */
+.stroke-text {
+  -webkit-text-stroke: 1.5px #e2e8f0; /* Light gray border */
+}
+
+.group:hover .stroke-text {
+  -webkit-text-stroke: 1.5px #46B0D5;
+}
+
+/* The horizontal fill animation */
+.fill-animation {
+  color: #e2e8f0; /* Default text color (very light) */
+  background: linear-gradient(to right, #46B0D5 50%, #e2e8f0 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.group:hover .fill-animation {
+  background-position: 0 0;
+}
+
+
+
+
