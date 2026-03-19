@@ -18,7 +18,6 @@ const Home = () => {
       <SceneSettings />
       <Navbar />
       <ShutterHero />
-      <ShutterHeroTwo />
       <FocusKinetic />
       <WhatWeDo />
       <ExpertiseSection />
