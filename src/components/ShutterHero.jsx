@@ -123,23 +123,27 @@ const ShutterHero = () => {
           </div>
         </div>
 
-        {/* Content */}
-        {/* Content Box */}
-        <div className="hero-content content-box relative z-10 lg:pl-20 flex flex-col items-center lg:items-start text-center lg:text-left group">
-          {/* The Scroll Line (Hidden on mobile to keep centering clean) */}
+        <div className="hero-content content-box relative z-10 lg:pl-20 flex flex-col items-center lg:items-start text-center lg:text-left group cursor-default">
+          {/* The Scroll Line */}
           <div
             ref={lineRef}
-            className="hidden lg:block absolute left-0 top-0 w-[3px] bg-gradient-to-b from-[#46B0D5] via-[#46B0D5] to-transparent origin-top scale-y-0"
+            className="hidden lg:block absolute left-0 top-0 w-[6px] bg-[#48B0C8] origin-top scale-y-0 transition-colors duration-500 group-hover:bg-[#46B0D5]"
             style={{ height: "100%" }}
           />
-          {/* Typography: Big on desktop, centered on mobile */}
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-none uppercase tracking-tighter transition-all duration-500">
+
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black leading-none uppercase tracking-tighter transition-all duration-700">
             <span className="block text-white mb-1">CINEMATIC</span>
 
-            {/* REVOLUTION: The Fill Effect */}
-            <span className="shutter-fill-text block">REVOLUTION</span>
+            {/* REVOLUTION: Left-to-Right Fill Effect */}
+            <span
+              className="shutter-wipe-text block bg-gradient-to-r from-[#46B0D5] from-50% to-white/20 to-50% bg-[length:200%_100%] bg-[100%_0%] bg-clip-text text-transparent transition-all duration-1000 ease-in-out group-hover:bg-[0%_0%]"
+              style={{ WebkitBackgroundClip: "text" }}
+            >
+              REVOLUTION
+            </span>
           </h1>
-          <p className="text-gray-400 mt-6 max-w-md text-sm sm:text-lg leading-relaxed px-4 lg:px-0 opacity-80">
+
+          <p className="text-gray-400 mt-6 max-w-md text-sm sm:text-lg leading-relaxed px-4 lg:px-0 opacity-80 group-hover:text-gray-200 transition-colors duration-500">
             Experience the art of digital focus. We blend premium engineering
             with high-fidelity visuals to redefine your perspective.
           </p>

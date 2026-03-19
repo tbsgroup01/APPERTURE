@@ -1,4 +1,3 @@
-
 /* Shutter.css */
 
 body {
@@ -6,8 +5,8 @@ body {
 }
 :root {
   /* --bg-color: #050505; */
-  --accent-blue: #46B0D5;
-  --blade-gradient:linear-gradient(135deg,#2c2c2e 0%,#1a1a1c 50%,#000 100%);
+  --accent-blue: #46b0d5;
+  --blade-gradient: linear-gradient(135deg, #2c2c2e 0%, #1a1a1c 50%, #000 100%);
 }
 
 .shutter-container {
@@ -16,9 +15,9 @@ body {
   height: 450px;
   background: radial-gradient(circle, #0f0f12 0%, #000 80%);
   border-radius: 50%;
-  box-shadow: 
+  box-shadow:
     0 0 0 8px #111,
-    0 20px 50px rgba(0,0,0,0.9),
+    0 20px 50px rgba(0, 0, 0, 0.9),
     0 0 40px rgba(70, 176, 213, 0.15);
 }
 
@@ -34,24 +33,50 @@ body {
 }
 
 @media (min-width: 300px) {
-  .shutter-container{
+  .shutter-container {
     width: 350px;
     height: 350px;
-
   }
-  .hero-content{
+  .hero-content {
     margin-top: 20px;
   }
-
 }
 
 /* Initial Blade Rotations */
-.b1 { --r: 0deg; }
-.b2 { --r: 60deg; }
-.b3 { --r: 120deg; }
-.b4 { --r: 180deg; }
-.b5 { --r: 240deg; }
-.b6 { --r: 300deg; }
+.b1 {
+
+  --r: 13deg;
+
+  opacity: 1;
+  translate: none;
+  rotate: none;
+  scale: none;
+
+  /* transform: rotate(55deg); */
+
+  position: absolute;
+  left: -24px !important;
+
+  margin-right: -24px;
+  margin-top: -73px;
+
+  padding-left: 66px;
+}
+.b2 {
+  --r: 60deg;
+}
+.b3 {
+  --r: 120deg;
+}
+.b4 {
+  --r: 180deg;
+}
+.b5 {
+  --r: 240deg;
+}
+.b6 {
+  --r: 300deg;
+}
 
 .content-box-glow::before {
   content: "";
@@ -60,23 +85,23 @@ body {
   top: 10%;
   height: 80%;
   width: 3px;
-  background: linear-gradient(to bottom, transparent, var(--accent-blue), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--accent-blue),
+    transparent
+  );
 }
 
-
-
-/* 1. Initial State: Hollow/Outline Text */
+/* In Shutter.css */
 .shutter-fill-text {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  display: inline-block;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* 2. Hover State: Fill with the blue color */
-/* Triggers when hovering over the hero-content area */
 .group:hover .shutter-fill-text {
-  color: #46B0D5;
-  -webkit-text-stroke: 1px #46B0D5;
-  text-shadow: 0 0 20px rgba(70, 176, 213, 0.4);
+  color: #46b0d5;
+  -webkit-text-stroke: 0px transparent;
+  text-shadow: 0 0 30px rgba(70, 176, 213, 0.4);
 }

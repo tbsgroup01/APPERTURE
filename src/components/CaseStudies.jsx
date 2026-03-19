@@ -11,7 +11,7 @@ const cases = [
   {
     title: "US Dermatology Product Market Access & Pricing",
     category: "Launch Strategy",
-    img: "https://images.unsplash.com/photo-1551288560-1996939c1b2b?auto=format&fit=crop&q=80&w=800",
+    img: "https://i1.wp.com/apperture.wp.bearly.dev/wp-content/uploads/sites/2/2021/06/AdobeStock_68275237-scaled.jpeg?fit=2560%2C1700&ssl=1",
   },
   {
     title: "Heme Onc Value Proposition Development Workshop",

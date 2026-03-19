@@ -6,13 +6,13 @@ const modules = [
   {
     title: "Recent Initiatives in US Drug Policy",
     subtitle: "Innovation, Value & Affordability",
-    img: "https://images.unsplash.com/photo-1585435559383-cc9c91440990?auto=format&fit=crop&q=80&w=800",
+    img: "https://i1.wp.com/apperture.wp.bearly.dev/wp-content/uploads/sites/2/2021/07/AdobeStock_80205027-scaled.jpeg?fit=2560%2C1423&ssl=1",
     duration: "45 min",
   },
   {
     title: "US Healthcare Overview Module",
     subtitle: "Training Agenda & Ecosystem",
-    img: "https://images.unsplash.com/photo-1504868584819-f8e90526354a?auto=format&fit=crop&q=80&w=800",
+    img: "https://i2.wp.com/apperture.wp.bearly.dev/wp-content/uploads/sites/2/2021/06/AdobeStock_128219575-scaled.jpeg?fit=2560%2C1707&ssl=1",
     duration: "60 min",
   },
   {

@@ -2,10 +2,13 @@
 
 body {
   overflow-x: hidden;
-} 
+}
+
+.navv {
+ box-shadow: rgba(75, 224, 250, 0.1) 0px 4px 16px, rgba(47, 177, 216, 0.05) 0px 8px 32px;
+}
 
 .glass-btn {
-
   display: inline-flex;
   text-decoration: none; /* Removes the default blue underline */
   color: white;
@@ -32,24 +35,28 @@ body {
   position: absolute;
   inset: 0;
   padding: 2px; /* This creates the gradient border thickness */
-  
+
   /* Semi-transparent background with blur */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  
+
   /* The "Magic" Border: Subtle white to transparent gradient */
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
-  
+
   background-image: linear-gradient(
-    135deg, 
-    rgba(255, 255, 255, 0.5), 
+    135deg,
+    rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.05)
   );
-  
+
   z-index: -1;
   transition: all 0.4s ease;
 }
@@ -88,7 +95,6 @@ body {
   left: 125%;
 }
 
-
 /* Custom Stroke for the Letters */
 /* Stroke effect for the initial letters */
 .stroke-text {
@@ -96,16 +102,15 @@ body {
 }
 
 .group:hover .stroke-text {
-  -webkit-text-stroke: 1.5px #46B0D5;
+  -webkit-text-stroke: 1.5px #46b0d5;
 }
 
 /* The horizontal fill animation */
 .fill-animation {
   color: #e2e8f0; /* Default text color (very light) */
-  background: linear-gradient(to right, #46B0D5 50%, #e2e8f0 50%);
+  background: linear-gradient(to right, #46b0d5 50%, #e2e8f0 50%);
   background-size: 200% 100%;
   background-position: 100% 0;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-position 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -114,6 +119,61 @@ body {
   background-position: 0 0;
 }
 
+/* From Uiverse.io by alexmaracinaru */
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
 
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
 
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
