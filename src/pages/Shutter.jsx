@@ -9,7 +9,7 @@ import logo from "../assets/logo.svg";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ShutterHero = () => {
+const ShutterHeroTwo = () => {
   const containerRef = useRef(null);
   const lineRef = useRef(null);
 
@@ -139,4 +139,4 @@ const ShutterHero = () => {
   );
 };
 
-export default ShutterHero;
+export default ShutterHeroTwo;

@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../src/pages/Home"
+import Home from "./pages/Home";
 
 
 
@@ -7,6 +7,7 @@ const App = () => {
   return (
     <>
       <Home />
+
     </>
   );
 };

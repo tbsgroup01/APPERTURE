@@ -10,6 +10,7 @@ import TestimonialSection from "../components/TestimonialSection";
 import Footer from "../components/Footer";
 import FocusKinetic from "../components/FocusKinetic";
 import WhatWeDo from "../components/WhatWeDo";
+import ShutterHeroTwo from "../components/ShutterHeroTwo";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <SceneSettings />
       <Navbar />
       <ShutterHero />
+      <ShutterHeroTwo />
       <FocusKinetic />
       <WhatWeDo />
       <ExpertiseSection />
